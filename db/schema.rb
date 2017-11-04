@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20171101120347) do
     t.datetime "updated_at", null: false
     t.integer "categoria_id"
     t.index ["autor_id"], name: "index_articulos_on_autor_id"
-    t.index ["categoria_id"], name: "index_articulos_on_categoria_id"
   end
 
   create_table "autors", force: :cascade do |t|

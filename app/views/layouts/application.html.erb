@@ -9,6 +9,34 @@
   </head>
 
   <body>
+  <div class="container">
+<%= link_to 'home', root_path %>
+<%= link_to 'contacto', estaticas_contacto_path %>
+<%= link_to 'nosotros', estaticas_nosotros_path %><br>
+
+<%= link_to 'iniciar sesión', new_autor_session_path %>
+<%= link_to 'crear cuenta', new_autor_registration_path %>
+<%= link_to 'cerrar sesión', destroy_autor_session_path, method: :delete %>
+<%= link_to 'editar', edit_autor_registration_path %>
+<br>
+
+
+
+
+
+
+  <ul>
+   <% flash.each do |key,value|%>
+    <li> <%= value %></li>
+   <% end %>
+  </ul>
+
+  
     <%= yield %>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   </body>
 </html>

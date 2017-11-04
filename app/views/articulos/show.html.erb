@@ -1,2 +1,14 @@
-<h1>Articulos#show</h1>
-<p>Find me in app/views/articulos/show.html.erb</p>
+<h1><%= @articulo.titulo %></h1>
+<p>Creado en: <%= @articulo.created_at.strftime("%d-%m-%Y") %></p>
+<p><%= @articulo.contenido %></p>
+
+<% if autor_signed_in? %>
+    <p><%= link_to "Editar", edit_articulo_path(@articulo)%>
+    <p><%= link_to "Eliminar", @articulo, :method => :delete, data: {confirm: "Seguro?"} %>
+<% end %>
+
+<p><%= @articulo.comentarios.count %> Comentarios </p>
+<%= render @articulo.comentarios %>
+<p>---------------------</p>
+<p><%= render 'comentarios/form' %></p>
+

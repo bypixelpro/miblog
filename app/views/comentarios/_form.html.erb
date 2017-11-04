@@ -1,0 +1,21 @@
+<%= form_for([@articulo, @articulo.comentarios.build]) do |form| %>
+  
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :comentario_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :texto %>
+    <%= form.text_area :texto, id: :comentario_texto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :articulo_id %>
+    <%= form.text_field :articulo_id, id: :comentario_articulo_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

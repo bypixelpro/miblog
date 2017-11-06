@@ -38,6 +38,7 @@ gem 'devise', '~> 4.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+  gem 'sqlite3'
 
 
 group :development do
@@ -48,12 +49,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
 end
 
 group :production do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'pg'
   gem 'rails_12factor'
 end
 
